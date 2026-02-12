@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - A. Gautam</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Math&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+
+    <link rel="stylesheet" href="public/css/style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <span class="highlight1"><span class="span1">W</span>elcome to the Developer's world 🚀</span>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav id="nav-menu">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#portfolio" class="nav-link">My Work</a>
+            <a href="#contact" class="nav-link btn-book">Contact Me</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-text" data-aos="zoom-in-right" data-aos-duration="800">
+            <h1>
+                <span class="strong" data-aos="fade-left" data-aos-delay="100"><span class="span1">H</span>i,</span>
+                <span class="highlight" data-aos="fade-right" data-aos-delay="300"> I'm A.Gautam :)</span>
+            </h1>
+
+            <div style="margin: 20px 0;">
+                <p class="highlight" style="font-size: 35px;" data-aos="zoom-in" data-aos-delay="400">Designer</p>
+                <p style="font-size: 26px; color: #ccc;" data-aos="zoom-in" data-aos-delay="500">&</p>
+                <p style="font-size: 40px; font-weight: bold; color: #fff;" data-aos="zoom-in" data-aos-delay="600">
+                    Developer</p>
+            </div>
+
+            <p class="desc" data-aos="fade-up" data-aos-delay="700">I specialize in developing high-conversion websites
+                that drive increased lead generation and sales for businesses.</p>
+            <br>
+            <p class="strong" data-aos="fade-up" data-aos-delay="800">Frontend Developer | React & Node.js</p>
+            <p class="strong highlight" data-aos="fade-up" data-aos-delay="900">Creative Technologist | AI-Powered Web
+            </p>
+
+            <div class="skill-icons">
+                <i class="devicon-html5-plain colored" title="HTML5"></i>
+                <i class="devicon-css3-plain colored" title="CSS3"></i>
+                <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+                <i class="devicon-mongodb-plain colored" title="MongoDB"></i>
+            </div>
+        </div>
+
+        <div class="hero-image-container" data-aos="zoom-in-up" data-aos-delay="500">
+            <div class="image-wrapper">
+                <img src="public/images/myimg.png" alt="Profile Photo" class="rounded-image" />
+
+                <div class="social-glass-bar">
+                    <a href="https://www.linkedin.com/in/a-gautam123" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/gautam-auc" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" target="_blank" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-rocket"></i>
+                <h2>25+</h2>
+                <p>Businesses Launched</p>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-chart-line"></i>
+                <h2>40%</h2>
+                <p>Avg. Lead Increase</p>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-check-circle"></i>
+                <h2>100%</h2>
+                <p>Client Satisfaction</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section" data-aos="fade-up">
+        <div class="section-header">
+            <h2>About / Working</h2>
+            <p>My education, internship journey, and technical skills</p>
+        </div>
+
+        <div class="timeline-container">
+            <div class="timeline-column">
+                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                <div class="timeline-card" data-aos="fade-up">
+                    <div class="card-header"><span class="tag">Sep 2021 – June 2025</span></div>
+                    <h4>B.Tech CSE</h4>
+                    <p class="subtitle">Amity University, Raipur</p>
+                    <p>GPA: 7.2</p>
+                </div>
+                <div class="timeline-card" data-aos="fade-up">
+                    <div class="card-header"><span class="tag">2019 – 2020</span></div>
+                    <h4>12th Grade</h4>
+                    <p class="subtitle">Shri Shankara Sr. Sec School, Raipur</p>
+                </div>
+                <div class="timeline-card" data-aos="fade-up">
+                    <div class="card-header"><span class="tag">2017 – 2018</span></div>
+                    <h4>10th Grade</h4>
+                    <p class="subtitle">Adarsh Vidyalaya, Raipur</p>
+                </div>
+            </div>
+
+            <div class="timeline-column">
+                <h3><i class="fas fa-briefcase"></i> Experience</h3>
+                <div class="timeline-card" data-aos="fade-up">
+                    <div class="card-header"><span class="tag">May 2025 – August 2025</span></div>
+                    <h4>Digital i360</h4>
+                    <p class="subtitle">Frontend Developer </p>
+                    <p>Gachibowli, Hyderabad</p>
+                </div>
+                <div class="timeline-card" data-aos="fade-up">
+                    <div class="card-header"><span class="tag">Jan 2025 – May 2025</span></div>
+                    <h4>Janki Institute of Technology</h4>
+                    <p class="subtitle">Frontend Developer</p>
+                    <p>Raipur, C.G.</p>
+                </div>
+                <div class="timeline-card" data-aos="fade-up">
+                    <div class="card-header"><span class="tag">Jul – Aug 2024</span></div>
+                    <h4>Bhilai Steel Plant</h4>
+                    <p class="subtitle">Data Analysis Intern</p>
+                    <p>Bhilai, Durg</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skill-section">
+        <div class="section-header">
+            <h2><i class="fas fa-code"></i> Skills</h2>
+        </div>
+
+        <div class="skills-marquee">
+            <div class="skills-track">
+
+                <!-- ===== SET 1 ===== -->
+                <div class="skill-card">
+                    <div class="circle-pulse"></div>
+                    <i class="fab fa-react skill-icon"></i>
+                    <strong>MERN Stack</strong>
+                    <p>(MongoDB, Express.js, React.js, Node.js)</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="circle-pulse"></div>
+                    <i class="fab fa-python skill-icon"></i>
+                    <strong>Python</strong>
+                    <p><em>(Basics)</em></p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="circle-pulse"></div>
+                    <i class="fas fa-cloud skill-icon"></i>
+                    <strong>Salesforce Trainee</strong>
+                    <p><em>(Developer)</em></p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="circle-pulse"></div>
+                    <i class="fab fa-git-alt skill-icon"></i>
+                    <strong>Git & GitHub</strong>
+                    <p><em>Version Control</em></p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="circle-pulse"></div>
+                    <i class="fas fa-code skill-icon"></i>
+                    <strong>VS Code</strong>
+                    <p><em>Development</em></p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="circle-pulse"></div>
+                    <i class="fas fa-rocket skill-icon"></i>
+                    <strong>Netlify / Vercel</strong>
+                    <p><em>Deployment</em></p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="circle-pulse"></div>
+                    <i class="fas fa-comments skill-icon"></i>
+                    <strong>Communication</strong>
+                </div>
+
+                <div class="skill-card">
+                    <div class="circle-pulse"></div>
+                    <i class="fas fa-users skill-icon"></i>
+                    <strong>Teamwork</strong>
+                </div>
+
+                <!-- ===== SET 2 (DUPLICATE FOR LOOP) ===== -->
+                <div class="skill-card">
+                    <div class="circle-pulse"></div>
+                    <i class="fab fa-react skill-icon"></i>
+                    <strong>MERN Stack</strong>
+                    <p>(MongoDB, Express.js, React.js, Node.js)</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="circle-pulse"></div>
+                    <i class="fab fa-python skill-icon"></i>
+                    <strong>Python</strong>
+                    <p><em>(Basics)</em></p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="circle-pulse"></div>
+                    <i class="fas fa-cloud skill-icon"></i>
+                    <strong>Salesforce Trainee</strong>
+                    <p><em>(Developer)</em></p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="circle-pulse"></div>
+                    <i class="fab fa-git-alt skill-icon"></i>
+                    <strong>Git & GitHub</strong>
+                    <p><em>Version Control</em></p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="circle-pulse"></div>
+                    <i class="fas fa-code skill-icon"></i>
+                    <strong>VS Code</strong>
+                    <p><em>Development</em></p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="circle-pulse"></div>
+                    <i class="fas fa-rocket skill-icon"></i>
+                    <strong>Netlify / Vercel</strong>
+                    <p><em>Deployment</em></p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="circle-pulse"></div>
+                    <i class="fas fa-comments skill-icon"></i>
+                    <strong>Communication</strong>
+                </div>
+
+                <div class="skill-card">
+                    <div class="circle-pulse"></div>
+                    <i class="fas fa-users skill-icon"></i>
+                    <strong>Teamwork</strong>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Services I Offer</h2>
+            <p>Turning complex problems into elegant digital solutions.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon-box"><i class="fas fa-laptop-code"></i></div>
+                <h3>Custom Web Development</h3>
+                <p>Tailor-made websites built with React & Node.js that are fast, secure, and scalable.</p>
+            </div>
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="icon-box"><i class="fas fa-mobile-alt"></i></div>
+                <h3>Responsive Design</h3>
+                <p>Ensuring your site looks perfect on every device, boosting mobile conversions.</p>
+            </div>
+            <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="icon-box"><i class="fas fa-bullhorn"></i></div>
+                <h3>High-Conversion Landing Pages</h3>
+                <p>Designed specifically to capture leads and increase sales by 40%.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-me-section">
+        <div class="why-me-container">
+            <div class="why-left" data-aos="fade-right">
+                <h2>Why Choose Me?</h2>
+
+                <p class="highlight" style="font-size: 1.4rem; margin-bottom: 20px; color: #ff3366;">
+                    My code is the tool. Your business growth is the goal.
+                </p>
+
+                <p style="margin-bottom: 30px; font-size: 1.1rem; line-height: 1.8;">
+                    I believe a website is an investment that must pay off. I combine technical excellence with a focus
+                    on your <strong style="color: #fff;">ROI</strong> to build solutions that actually work for your
+                    business.
+                </p>
+
+                <ul class="why-list">
+                    <li>
+                        <div class="icon-circle"><i class="fas fa-check"></i></div>
+                        <div>
+                            <strong>Speed:</strong>
+                            <span>I deliver projects on time, every time.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon-circle"><i class="fas fa-check"></i></div>
+                        <div>
+                            <strong>Quality:</strong>
+                            <span>Clean code that is easy to maintain.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon-circle"><i class="fas fa-check"></i></div>
+                        <div>
+                            <strong>Communication:</strong>
+                            <span>Regular updates, no ghosting.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="why-right" data-aos="fade-left">
+                <div class="glass-card-visual">
+                    <div class="gem-container">
+                        <i class="fas fa-gem animated-gem"></i>
+                        <div class="gem-shadow"></div>
+                    </div>
+                    <h3>Premium Quality</h3>
+                    <p>Guaranteed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="techstack" class="techstack-section">
+        <div class="section-header">
+            <h2><i class="fas fa-layer-group"></i> Tech Stack</h2>
+            <p>Technologies I use to build modern web experiences</p>
+        </div>
+
+        <div class="techstack-grid">
+            <div class="tech-item"><i class="fab fa-html5 tech-icon" style="color:#e34c26;"></i><span>HTML5</span></div>
+            <div class="tech-item"><i class="fab fa-css3-alt tech-icon" style="color:#1572B6;"></i><span>CSS3</span>
+            </div>
+            <div class="tech-item"><i class="fab fa-js tech-icon" style="color:#f0db4f;"></i><span>JavaScript</span>
+            </div>
+            <div class="tech-item"><i class="fab fa-react tech-icon" style="color:#61DBFB;"></i><span>React</span></div>
+            <div class="tech-item"><i class="fab fa-node-js tech-icon" style="color:#68A063;"></i><span>Node.js</span>
+            </div>
+            <div class="tech-item"><i class="fas fa-database tech-icon" style="color:#4DB33D;"></i><span>MongoDB</span>
+            </div>
+            <div class="tech-item"><i class="fab fa-git-alt tech-icon" style="color:#f1502f;"></i><span>Git</span></div>
+            <div class="tech-item"><i class="fab fa-github tech-icon" style="color:#ffffff;"></i><span>GitHub</span>
+            </div>
+            <div class="tech-item"><i class="fas fa-cloud tech-icon" style="color:#00c7b7;"></i><span>Cloud</span></div>
+        </div>
+
+        <div class="tech-subheading" data-aos="fade-up">
+            <h3><i class="fas fa-tools"></i> Technologies Used</h3>
+            <p>This section showcases the tools and technologies integrated to develop the full-featured experience.</p>
+        </div>
+
+        <div class="tech-details">
+            <div class="tech-card tech-animate" style="--i:1"><i class="fab fa-html5 tech-icon"
+                    style="color: #e34c26;"></i>
+                <h4>HTML5</h4>
+                <p>Structure</p>
+            </div>
+            <div class="tech-card tech-animate" style="--i:2"><i class="fab fa-css3-alt tech-icon"
+                    style="color: #264de4;"></i>
+                <h4>CSS3</h4>
+                <p>Styling</p>
+            </div>
+            <div class="tech-card tech-animate" style="--i:3"><i class="fab fa-js-square tech-icon"
+                    style="color: #f0db4f;"></i>
+                <h4>JavaScript</h4>
+                <p>Logic</p>
+            </div>
+            <div class="tech-card tech-animate" style="--i:5"><i class="fab fa-node tech-icon"
+                    style="color: #68a063;"></i>
+                <h4>Node.js</h4>
+                <p>Backend</p>
+            </div>
+            <div class="tech-card tech-animate" style="--i:6"><i class="fas fa-database tech-icon"
+                    style="color: #4db33d;"></i>
+                <h4>MongoDB</h4>
+                <p>Database</p>
+            </div>
+            <div class="tech-card tech-animate" style="--i:7"><i class="fab fa-git-alt tech-icon"
+                    style="color: #f1502f;"></i>
+                <h4>Git</h4>
+                <p>Version Control</p>
+            </div>
+            <div class="tech-card tech-animate" style="--i:8"><i class="fab fa-github tech-icon"
+                    style="color: #fff;"></i>
+                <h4>GitHub</h4>
+                <p>Hosting</p>
+            </div>
+            <div class="tech-card tech-animate" style="--i:9"><i class="fas fa-cloud-upload-alt tech-icon"
+                    style="color: #00c7b7;"></i>
+                <h4>Vercel</h4>
+                <p>Deploy</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="portfolio-section">
+        <div class="section-header" data-aos="fade-down">
+            <h2><i class="fas fa-briefcase"></i> My Work</h2>
+            <p>Recent projects delivering real value</p>
+        </div>
+
+        <div class="portfolio-grid">
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-image">
+                    <img src="public/images/Alanatilogo.png" alt="Alanati Project">
+
+                    <div class="project-logo">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+
+                    <div class="card-overlay">
+                        <a href="https://www.alanatipindivantalu.com/" target="_blank" class="btn-view">
+                            <i class="fas fa-external-link-alt"></i> Visit Site
+                        </a>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>Alanati</h3>
+                    <p>A comprehensive digital solution tailored for business automation and client management.</p>
+                    <div class="tech-tags">
+                        <span>Fullstack Project</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-image">
+                    <img src="public/images/image.png" alt="Royal India Trails">
+                    <div class="project-logo">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="card-overlay">
+                        <a href="#" class="btn-view"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>Royal India Trails</h3>
+                    <p>An immersive travel platform showcasing the heritage and beauty of India with seamless booking.
+                    </p>
+                    <div class="tech-tags">
+                        <span>React.JS</span><span>MongoDB</span><span>Animation</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-image">
+                    <img src="public/images/proser.png" alt="Proser">
+                    <div class="project-logo">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="card-overlay">
+                        <a href="#" class="btn-view"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>Proser</h3>
+                    <p>A professional service provider platform connecting experts with clients efficiently.</p>
+                    <div class="tech-tags">
+                        <span>React.JS</span><span>Laravel</span><span>Tailwind</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-background-text">CONTACT</div>
+        <div class="contact-content">
+            <div class="contact-left">
+                <button class="contact-badge">Contact</button>
+                <h2>Get in touch</h2>
+                <p>Have questions or ready to transform your business with AI automation?</p>
+
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-left">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <p>Email </p>
+                                <a href="mailto:agautamrpr@gmail.com">agautamrpr@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="info-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-left">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <p>Call </p>
+                                <a href="tel:+918770644256">(+91) 8770644256</a>
+                            </div>
+                        </div>
+                        <div class="info-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-left">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p>Location</p>
+                                <span>Gachibowli, Hyderabad, India</span>
+                            </div>
+                        </div>
+                        <div class="info-arrow"><i class="fas fa-arrow-up-right-from-square"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-right">
+                <form class="contact-form">
+                    <input type="text" placeholder="Name" name="name" required />
+                    <input type="email" placeholder="Email" name="email" required />
+                    <textarea placeholder="Message" name="message" required></textarea>
+                    <button type="submit">Submit</button>
+                    <div class="thank-you-msg">🎉 Thank you! Message sent.</div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="public/js/index.js"></script>
+
+</html>
