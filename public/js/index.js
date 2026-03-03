@@ -118,7 +118,97 @@ document.addEventListener("DOMContentLoaded", () => {
         shadow.style.opacity = "0.5";
     });
 
+    const carousel = document.getElementById("carousel3d");
+    const cards = document.querySelectorAll(".carousel-card");
 
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
+    if (!isMobile) {
+
+        /* ======================
+           DESKTOP 3D ROTATION
+        ====================== */
+
+        const total = cards.length;
+        const radius = 420;
+        let angle = 0;
+        let isDragging = false;
+        let startX = 0;
+
+        cards.forEach((card, index) => {
+            const rotation = (360 / total) * index;
+            card.style.transform = `rotateY(${rotation}deg) translateZ(${radius}px)`;
+        });
+
+        function autoRotate() {
+            if (!isDragging) {
+                angle -= 0.04;
+                carousel.style.transform = `rotateY(${angle}deg)`;
+            }
+            requestAnimationFrame(autoRotate);
+
+        }
+        autoRotate();
+
+        carousel.addEventListener("mousedown", (e) => {
+            isDragging = true;
+            startX = e.pageX;
+        });
+
+        window.addEventListener("mouseup", () => {
+            isDragging = false;
+        });
+
+        window.addEventListener("mousemove", (e) => {
+            if (!isDragging) return;
+            const move = e.pageX - startX;
+            angle += move * 0.3;
+            carousel.style.transform = `rotateY(${angle}deg)`;
+            startX = e.pageX;
+        });
+
+    }
+    /* ======================
+       PROJECT PAGE REDIRECT
+    ====================== */
+
+    cards.forEach(card => {
+        card.addEventListener("click", () => {
+            const page = card.getAttribute("data-page");
+            if (page) {
+                window.location.href = page;
+            }
+        });
+    });
+
+    const testimonialWrapper = document.querySelector(".testimonial-wrapper");
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    testimonialWrapper.addEventListener("mousedown", (e) => {
+        isDown = true;
+        testimonialWrapper.style.cursor = "grabbing";
+        startX = e.pageX - testimonialWrapper.offsetLeft;
+        scrollLeft = testimonialWrapper.scrollLeft;
+    });
+
+    testimonialWrapper.addEventListener("mouseleave", () => {
+        isDown = false;
+        testimonialWrapper.style.cursor = "grab";
+    });
+
+    testimonialWrapper.addEventListener("mouseup", () => {
+        isDown = false;
+        testimonialWrapper.style.cursor = "grab";
+    });
+
+    testimonialWrapper.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - testimonialWrapper.offsetLeft;
+        const walk = (x - startX) * 2;
+        testimonialWrapper.scrollLeft = scrollLeft - walk;
+    });
 
 });

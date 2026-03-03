@@ -746,156 +746,202 @@ section {
    8. PORTFOLIO SECTION (3D CARDS + LOGOS)
    ================================================================= */
 .portfolio-section {
-    padding: 100px 60px;
-    background-color: #000;
-    position: relative;
+    padding: 100px 0;
+    background: #050505;
+    text-align: center;
+    color: #fff;
 }
 
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-    gap: 50px;
-    max-width: 1300px;
-    margin: 50px auto 0;
-}
+/* =========================
+   DESKTOP 3D CAROUSEL
+========================= */
 
-.project-card {
-    background: #0a0a0a;
-    border: 1px solid #222;
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-/* Hover Lift */
-.project-card:hover {
-    transform: translateY(-15px) scale(1.02);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
-    border-color: #ff3366;
-}
-
-.card-image {
-    position: relative;
-    height: 260px;
-    overflow: hidden;
-    border-bottom: 1px solid #222;
-}
-
-.card-image img {
+.carousel-container {
     width: 100%;
-    height: 100%;
+    height: 650px;
+    /* increased height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1500px;
+    overflow: visible;
+    /* important */
+    margin-top: 60px;
+}
+
+.carousel-3d {
+    width: 320px;
+    height: 360px;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.carousel-card {
+    position: absolute;
+    width: 260px;
+    height: 340px;
+    background: #111;
+    border-radius: 22px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-card img {
+    width: 100%;
+    height: 220px;
     object-fit: cover;
-    transition: transform 0.8s ease;
 }
 
-.project-card:hover .card-image img {
-    transform: scale(1.15) rotate(1deg);
-    /* Slight zoom */
+
+/* =========================
+   MOBILE SIMPLE LOOP
+========================= */
+
+@media (max-width: 768px) {
+
+    .carousel-container {
+        perspective: none !important;
+        overflow: hidden;
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .carousel-3d {
+        display: flex !important;
+        position: relative !important;
+        transform: none !important;
+        animation: workScroll 25s linear infinite;
+        width: max-content;
+        gap: 20px;
+    }
+
+    .carousel-card {
+        position: relative !important;
+        transform: none !important;
+        min-width: 260px;
+        height: 320px;
+        flex-shrink: 0;
+    }
+
 }
 
-/* NEW: Project Logo Badge */
-.project-logo {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 50px;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    z-index: 5;
+/* infinite animation */
+@keyframes workScroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
 }
 
-.project-logo i {
-    font-size: 24px;
-    color: #000;
+/* =========================
+   MODERN AI TESTIMONIAL
+========================= */
+
+.testimonial-section {
+    padding: 100px 60px;
+    background: radial-gradient(circle at top, #0d0d0d, #000);
+    overflow-x: hidden;
+    /* hide horizontal scroll only */
+    overflow-y: visible;
+    /* allow hover movement */
 }
 
-/* Overlay & Button */
-.card-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* wrapper */
+.testimonial-wrapper {
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(4px);
+    overflow: hidden;
+    position: relative;
+}
+
+/* track */
+.testimonial-track {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: 6;
+    gap: 30px;
+    width: max-content;
+    animation: aiScroll 45s linear infinite;
 }
 
-.project-card:hover .card-overlay {
-    opacity: 1;
+/* pause on hover */
+.testimonial-wrapper:hover .testimonial-track {
+    animation-play-state: paused;
 }
 
-.btn-view {
-    padding: 12px 35px;
-    background: #ff3366;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 700;
-    transform: translateY(30px);
+/* infinite scroll */
+@keyframes aiScroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* card */
+.testimonial-card {
+    min-width: 300px;
+    max-width: 300px;
+    padding: 28px;
+    border-radius: 20px;
+
+    background: linear-gradient(145deg,
+            rgba(255, 255, 255, 0.05),
+            rgba(255, 255, 255, 0.02));
+
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: #eee;
+    flex-shrink: 0;
+
     transition: all 0.4s ease;
-    box-shadow: 0 4px 15px rgba(255, 51, 102, 0.4);
 }
 
-.btn-view:hover {
-    background: #fff;
-    color: #ff3366;
+/* glow hover */
+.testimonial-card:hover {
+    transform: translateY(-2.9px) scale(1.);
+    border-color: #ff3366;
+    box-shadow:
+        0 0 25px rgba(255, 51, 102, 0.25),
+        0 0 50px rgba(255, 51, 102, 0.15);
 }
 
-.project-card:hover .btn-view {
-    transform: translateY(0);
-}
-
-/* Content */
-.card-content {
-    padding: 30px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.card-content h3 {
-    font-size: 1.6rem;
-    color: #fff;
-    margin-bottom: 12px;
-}
-
-.card-content p {
-    color: #aaa;
+/* text */
+.testimonial-card p {
     font-size: 0.95rem;
     line-height: 1.6;
-    margin-bottom: 25px;
-    flex-grow: 1;
-}
-
-.tech-tags {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.tech-tags span {
-    font-size: 0.8rem;
-    background: rgba(255, 255, 255, 0.05);
     color: #ccc;
-    padding: 6px 14px;
-    border-radius: 20px;
-    border: 1px solid #333;
+    margin-bottom: 18px;
 }
+
+.testimonial-card h4 {
+    font-size: 0.9rem;
+    color: #ff3366;
+    font-weight: 600;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+
+    .testimonial-section {
+        padding: 90px 20px;
+    }
+
+    .testimonial-card {
+        min-width: 240px;
+        max-width: 240px;
+    }
+
+    .testimonial-track {
+        gap: 20px;
+        animation-duration: 35s;
+    }
+}
+
 
 /* =================================================================
    9. CONTACT SECTION
@@ -903,7 +949,7 @@ section {
 .contact-section {
     position: relative;
     padding: 100px 60px;
-    background: radial-gradient(circle at center, rgba(0, 180, 255, 0.08) 0%, #000 70%);
+    background: radial-gradient(circle at center, rgba(0, 180, 255, 0.08) 0%, #1b19191c 70%);
     overflow: hidden;
 }
 
@@ -1061,13 +1107,20 @@ section {
     color: #00c8ff;
     margin-top: 10px;
 }
+
+.carousel-card.focus {
+    transform: scale(1.08) !important;
+    box-shadow: 0 35px 80px rgba(255, 45, 117, 0.4);
+}
+
 /* ===============================
    CONTACT SECTION – MOBILE FIX
 ================================ */
 @media (max-width: 768px) {
 
     .contact-section {
-        padding: 90px 16px 60px; /* space from fixed navbar */
+        padding: 90px 16px 60px;
+        /* space from fixed navbar */
     }
 
     .contact-content {
@@ -1326,7 +1379,7 @@ section {
     .stats-container {
         grid-template-columns: 1fr;
     }
-    
+
 }
 
 /* ================= SERVICES ================= */
@@ -1635,4 +1688,20 @@ section {
         justify-content: center;
         text-align: left;
     }
+}
+
+.card-icon {
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background: #ff2d75;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    box-shadow: 0 10px 25px rgba(255, 45, 117, 0.5);
 }

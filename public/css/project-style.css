@@ -1,0 +1,86 @@
+/* =========================
+   PROJECT DETAIL PAGE STYLE
+========================= */
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #050505;
+    color: #fff;
+}
+
+.project-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-bottom: 40px;
+    color: #ff2d75;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.project-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.project-hero img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+}
+
+.project-content h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.project-content p {
+    color: #aaa;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.tech-stack span {
+    display: inline-block;
+    background: #111;
+    padding: 8px 14px;
+    border-radius: 20px;
+    margin: 5px 5px 5px 0;
+    font-size: 14px;
+}
+
+.project-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: #ff2d75;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.project-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(255, 45, 117, 0.4);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .project-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .project-content h1 {
+        font-size: 28px;
+    }
+}
